@@ -1,6 +1,8 @@
 *,
 *::before,
 *::after{
+    margin: 0;
+    padding: 0;
     box-sizing: border-box;
 }
 
@@ -15,6 +17,10 @@ body {
 img {
     display: block;
     max-width: 100%;
+}
+
+li{
+    list-style: none;
 }
 
 a{
