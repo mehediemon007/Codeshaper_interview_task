@@ -6,7 +6,7 @@
 
 body {
     margin: 0;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: 'bingar_demo';
     background: var(--color-bg);
     color: var(--color-text);
     overflow-x: hidden;
@@ -15,4 +15,8 @@ body {
 img {
     display: block;
     max-width: 100%;
+}
+
+a{
+    text-decoration: none;
 }

@@ -1,8 +1,8 @@
 :root {
   --color-blue: #0C30AE;
   --color-light-green: #0C30AE;
-  --color-green: #151C02;
-  --color-olive: #041C0C;
+  --color-green: #041C0C;
+  --color-olive: #151C02;
   --color-white: #ffffff;
 }
 
@@ -14,7 +14,7 @@
 
 body {
   margin: 0;
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: "bingar_demo";
   background: var(--color-bg);
   color: var(--color-text);
   overflow-x: hidden;
@@ -23,6 +23,10 @@ body {
 img {
   display: block;
   max-width: 100%;
+}
+
+a {
+  text-decoration: none;
 }
 
 h1,
@@ -43,26 +47,8 @@ h2 {
   font-size: clamp(1.75rem, 1.5227272727rem + 0.9696969697vw, 2.25rem);
 }
 
-p {
-  font-size: 1rem;
-  font-size: clamp(1rem, 0.9431818182rem + 0.2424242424vw, 1.125rem);
-  line-height: 1.5;
-}
-p.small {
-  font-size: 0.8125rem;
-}
-
-a {
-  text-decoration: none;
-}
-
-p > a {
-  color: var(--color-text);
-  text-decoration: underline;
-  transition: color 150ms ease-in-out;
-}
-p > a:hover {
-  color: var(--color-accent);
+.container {
+  padding: 0 50px;
 }
 
 .header {
@@ -130,14 +116,45 @@ p > a:hover {
 }
 
 .footer {
+  background-color: var(--color-olive);
+}
+.footer .footer__top {
+  display: grid;
+  grid-template-columns: 0.5fr 4fr 1fr;
+  padding: 100px 0;
+  border-bottom: 3px solid var(--color-white);
+}
+.footer .footer__top .footer__widget .footer__widget__menu_wrapper {
+  display: flex;
+  justify-content: flex-end;
+  border-left: 1px solid var(--color-white);
+  border-right: 1px solid var(--color-white);
+}
+.footer .footer__top .footer__widget__title {
+  font-size: 35px;
+  line-height: 60px;
+  font-weight: 800;
+  color: var(--color-white);
+}
+.footer .footer__bottom {
+  padding: 70px 0;
+}
+.footer .footer__bottom .footer__social__link {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 16px;
+}
+.footer .footer__bottom .footer__social__link .social__link {
+  display: inline-block;
+  width: 100%;
+  font-size: 70px;
+  line-height: 42px;
+  font-weight: 400;
+  color: var(--color-white);
+  border: 1px solid var(--color-white);
+  border-radius: 100px;
+  padding: 55px 60px;
   text-align: center;
-  padding-block: 14px;
-}
-@media (width >= 43.75em) {
-  .footer {
-    padding-block: 20px;
-  }
-}
-.footer p {
-  margin: 0;
+  text-transform: uppercase;
 }/*# sourceMappingURL=style.css.map */

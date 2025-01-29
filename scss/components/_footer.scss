@@ -1,14 +1,55 @@
 @use '../util/' as u;
 
-.footer {
-  text-align: center;
-  padding-block: 14px;
+.footer{
+  background-color: var(--color-olive);
 
-  @include u.breakpoint(medium) {
-    padding-block: 20px;
+  .footer__top{
+    display: grid;
+    grid-template-columns: .5fr 4fr 1fr;
+    padding: 100px 0;
+    border-bottom: 3px solid var(--color-white);
+
+    .footer__widget{
+      .footer__widget__menu_wrapper{
+        display: flex;
+        justify-content: flex-end;
+        border-left: 1px solid var(--color-white);
+        border-right: 1px solid var(--color-white);
+      }
+    }
+
+    .footer__widget__title{
+      font-size: 35px;
+      line-height: 60px;
+      font-weight: 800;
+      color: var(--color-white);
+    }
   }
 
-  p {
-    margin: 0;
+  .footer__bottom{
+    padding: 70px 0;
+
+    .footer__social__link{
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 16px;
+
+      .social__link{
+        display: inline-block;
+        width: 100%;
+        font-size: 70px;
+        line-height: 42px;
+        font-weight: 400;
+        color: var(--color-white);
+        border: 1px solid var(--color-white);
+        border-radius: 100px;
+        padding: 55px 60px;
+        text-align: center;
+        text-transform: uppercase;
+      }
+    }
+
+
   }
 }
