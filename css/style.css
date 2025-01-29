@@ -1,4 +1,143 @@
+:root {
+  --color-blue: #0C30AE;
+  --color-light-green: #0C30AE;
+  --color-green: #151C02;
+  --color-olive: #041C0C;
+  --color-white: #ffffff;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
 body {
-  font-family: "hagrid_trial";
-  font-size: 237px;
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  background: var(--color-bg);
+  color: var(--color-text);
+  overflow-x: hidden;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  margin: 0;
+  line-height: 1.1;
+}
+
+h1 {
+  font-size: 2.25rem;
+  font-size: clamp(2.25rem, 1.9090909091rem + 1.4545454545vw, 3rem);
+}
+
+h2 {
+  font-size: 1.75rem;
+  font-size: clamp(1.75rem, 1.5227272727rem + 0.9696969697vw, 2.25rem);
+}
+
+p {
+  font-size: 1rem;
+  font-size: clamp(1rem, 0.9431818182rem + 0.2424242424vw, 1.125rem);
+  line-height: 1.5;
+}
+p.small {
+  font-size: 0.8125rem;
+}
+
+a {
+  text-decoration: none;
+}
+
+p > a {
+  color: var(--color-text);
+  text-decoration: underline;
+  transition: color 150ms ease-in-out;
+}
+p > a:hover {
+  color: var(--color-accent);
+}
+
+.header {
+  background-color: var(--color-blue);
+}
+.header__wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.header__wrapper--left {
+  width: 80%;
+  height: 100px;
+  border-bottom: 2px solid var(--color-white);
+}
+.header__wrapper--left > .logo {
+  width: 140px;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-right: 50px;
+  border-right: 2px solid var(--color-white);
+}
+
+.nav__icons {
+  max-width: -moz-max-content;
+  max-width: max-content;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 50px;
+}
+.nav__icons .cart__icon {
+  width: 24px;
+  height: 24px;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.menu__icon {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+}
+.menu__icon > .line {
+  display: inline-block;
+  width: 85px;
+  height: 1px;
+  background-color: var(--color-white);
+}
+
+.hero__wrapper {
+  display: grid;
+  gap: 20px;
+}
+@media (width >= 43.75em) {
+  .hero__wrapper {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 40px;
+    align-items: center;
+  }
+}
+
+.footer {
+  text-align: center;
+  padding-block: 14px;
+}
+@media (width >= 43.75em) {
+  .footer {
+    padding-block: 20px;
+  }
+}
+.footer p {
+  margin: 0;
 }/*# sourceMappingURL=style.css.map */

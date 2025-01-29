@@ -1,4 +1,2 @@
-body{
-    font-family: 'hagrid_trial';
-    font-size: 237px;
-}
+@use 'global';
+@use 'components';
