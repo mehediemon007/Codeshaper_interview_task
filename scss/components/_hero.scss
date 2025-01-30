@@ -3,6 +3,68 @@
 .banner{
 
   background-color: var(--color-blue);
+  padding: 100px 0 65px;
+
+  &__content{
+    &__line{
+      width: max-content;
+      display: flex;
+      align-items: baseline;
+      
+      .text{
+        font-size: clamp(16px, 1.5vw , 30px);
+        font-weight: 400;
+        text-transform: uppercase;
+        color: var(--color-white);
+        margin-left: 32px;
+      }
+    }
+
+    &__title{
+      font-size: clamp(48px, 10.42vw, 200px);
+      line-height: 1;
+      font-weight: 800;
+      color: var(--color-white);
+      text-transform: uppercase;
+    }
+
+    .mail{
+      font-size: clamp(16px, 1.82vw , 35px);
+      font-weight: 400;
+      text-transform: uppercase;
+      color: var(--color-white);
+    }
+
+    &__desc{
+      max-width: 450px;
+      font-size: 28px;
+      font-weight: 400;
+      color: var(--color-white);
+    }
+
+    .line2{
+      align-items: center;
+      gap: 150px;
+      margin-left: 25%;
+      .banner__content__title{
+        display: flex;
+        align-items: center;
+        font-size: clamp(48px, 10.5vw, 210px);
+      }
+    }
+
+    .line3{
+      flex-direction: column;
+      align-items: center;
+      margin-left: auto;
+      .banner__content__title{
+        font-size: clamp(48px, 12.34vw, 237px);
+      }
+    }
+
+  }
+
+  
 
   .banner__slider__wrapper {
 
@@ -11,6 +73,8 @@
     align-items: flex-end;
     justify-content: space-between;
     gap: 50px;
+    position: relative;
+    margin-top: -30%;
   
     .banner__slider__main {
       width: 100%;
@@ -20,18 +84,19 @@
       .swiper-slide {
         
         img {
-          max-height: 956px;
           object-fit: contain;
         }
       }
     }
   
     .banner__slider__thumbs{
-      max-width: 585px;
+      max-width: 580px;
       margin: 50px 100px;
       overflow: hidden;
   
       .swiper-slide{
+
+        max-width: 181px;
         
         &-active{
           display: none;
@@ -46,8 +111,6 @@
         }
   
         img {
-          max-width: 181px;
-          height: auto;
           border-radius: 30px;
         }
   

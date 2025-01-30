@@ -15,6 +15,7 @@
 }
 
 body {
+  width: 100%;
   margin: 0;
   font-family: "bingar_demo";
   background: var(--color-bg);
@@ -61,7 +62,7 @@ h5 {
   left: 0;
   bottom: 0;
   content: "";
-  width: 75%;
+  width: 80%;
   height: 2px;
   background-color: var(--color-white);
 }
@@ -71,6 +72,7 @@ h5 {
   align-items: center;
 }
 .header__wrapper--left {
+  position: relative;
   width: 80%;
   height: 100px;
 }
@@ -116,6 +118,57 @@ h5 {
 
 .banner {
   background-color: var(--color-blue);
+  padding: 100px 0 65px;
+}
+.banner__content__line {
+  width: -moz-max-content;
+  width: max-content;
+  display: flex;
+  align-items: baseline;
+}
+.banner__content__line .text {
+  font-size: clamp(16px, 1.5vw, 30px);
+  font-weight: 400;
+  text-transform: uppercase;
+  color: var(--color-white);
+  margin-left: 32px;
+}
+.banner__content__title {
+  font-size: clamp(48px, 10.42vw, 200px);
+  line-height: 1;
+  font-weight: 800;
+  color: var(--color-white);
+  text-transform: uppercase;
+}
+.banner__content .mail {
+  font-size: clamp(16px, 1.82vw, 35px);
+  font-weight: 400;
+  text-transform: uppercase;
+  color: var(--color-white);
+}
+.banner__content__desc {
+  max-width: 450px;
+  font-size: 28px;
+  font-weight: 400;
+  color: var(--color-white);
+}
+.banner__content .line2 {
+  align-items: center;
+  gap: 150px;
+  margin-left: 25%;
+}
+.banner__content .line2 .banner__content__title {
+  display: flex;
+  align-items: center;
+  font-size: clamp(48px, 10.5vw, 210px);
+}
+.banner__content .line3 {
+  flex-direction: column;
+  align-items: center;
+  margin-left: auto;
+}
+.banner__content .line3 .banner__content__title {
+  font-size: clamp(48px, 12.34vw, 237px);
 }
 .banner .banner__slider__wrapper {
   width: 100%;
@@ -123,6 +176,8 @@ h5 {
   align-items: flex-end;
   justify-content: space-between;
   gap: 50px;
+  position: relative;
+  margin-top: -30%;
 }
 .banner .banner__slider__wrapper .banner__slider__main {
   width: 100%;
@@ -130,14 +185,16 @@ h5 {
   overflow: hidden;
 }
 .banner .banner__slider__wrapper .banner__slider__main .swiper-slide img {
-  max-height: 956px;
   -o-object-fit: contain;
      object-fit: contain;
 }
 .banner .banner__slider__wrapper .banner__slider__thumbs {
-  max-width: 585px;
+  max-width: 580px;
   margin: 50px 100px;
   overflow: hidden;
+}
+.banner .banner__slider__wrapper .banner__slider__thumbs .swiper-slide {
+  max-width: 181px;
 }
 .banner .banner__slider__wrapper .banner__slider__thumbs .swiper-slide-active {
   display: none;
@@ -150,11 +207,49 @@ h5 {
   margin-bottom: 16px;
 }
 .banner .banner__slider__wrapper .banner__slider__thumbs .swiper-slide img {
-  max-width: 181px;
-  height: auto;
   border-radius: 30px;
 }
 
+.service__ribbon {
+  position: absolute;
+  top: -100px;
+  right: -13%;
+  max-width: 692px;
+  display: flex;
+  background-color: var(--color-light-green);
+  padding: 16px 8px;
+  transform: rotate(45deg);
+  transform-origin: left;
+  overflow: hidden;
+}
+.service__ribbon .service__wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex: none;
+  animation: marquree 20s linear infinite;
+}
+.service__ribbon .service__name {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 24px;
+  margin-left: 24px;
+}
+.service__ribbon .service__name p {
+  font-size: clamp(24px, 3.65vw, 70px);
+  color: var(--color-green);
+  text-transform: uppercase;
+}
+
+@keyframes marquree {
+  0% {
+    transform: translate(0, 0);
+  }
+  100% {
+    transform: translate(-100%, 0);
+  }
+}
 .contact {
   background-color: var(--color-light-green);
   padding: 200px 110px 50px 90px;
@@ -165,7 +260,7 @@ h5 {
   gap: 50px;
 }
 .contact__content__title {
-  font-size: 190px;
+  font-size: clamp(32px, 10vw, 190px);
   line-height: 200px;
   font-weight: 800;
   text-transform: uppercase;
@@ -177,11 +272,11 @@ h5 {
   justify-content: flex-end;
 }
 .contact__content.line2 .contact__content__title {
-  font-size: 310px;
+  font-size: clamp(48px, 16vw, 310px);
   margin-bottom: 50px;
 }
 .contact__content.line3 .contact__content__title {
-  font-size: 220px;
+  font-size: clamp(36px, 12vw, 220px);
 }
 .contact__info {
   position: relative;
@@ -204,6 +299,7 @@ h5 {
   position: absolute;
   top: 50%;
   left: 50%;
+  max-width: auto;
   transform: translate(-50%, -50%);
 }
 .contact__mail {
@@ -263,8 +359,8 @@ h5 {
 .footer .footer__bottom .footer__social__link .social__link {
   display: inline-block;
   width: 100%;
-  font-size: 70px;
-  line-height: 42px;
+  font-size: clamp(16px, 3.65vw, 70px);
+  line-height: 0.45;
   font-weight: 400;
   color: var(--color-white);
   border: 1px solid var(--color-white);

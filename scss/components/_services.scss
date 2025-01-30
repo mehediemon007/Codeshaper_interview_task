@@ -1,0 +1,43 @@
+.service__ribbon{
+    position: absolute;
+    top: -100px;
+    right: -13%;
+    max-width: 692px;
+    display: flex;
+    background-color: var(--color-light-green);
+    padding: 16px 8px;
+    transform: rotate(45deg);
+    transform-origin: left;
+    overflow: hidden;
+
+    .service__wrapper{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex: none;
+        animation: marquree 20s linear infinite;
+    }
+
+    .service__name{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 24px;
+        margin-left: 24px;
+
+        p{
+            font-size: clamp(24px, 3.65vw, 70px);
+            color: var(--color-green);
+            text-transform: uppercase;
+        }
+    }
+}
+
+@keyframes marquree { 
+    0% { 
+        transform: translate(0,0)
+    }
+    100%{
+        transform: translate(-100%,0)
+    }
+}

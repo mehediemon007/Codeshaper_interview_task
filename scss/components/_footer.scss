@@ -58,8 +58,8 @@
       .social__link{
         display: inline-block;
         width: 100%;
-        font-size: 70px;
-        line-height: 42px;
+        font-size: clamp(16px, 3.65vw, 70px);
+        line-height: .45;
         font-weight: 400;
         color: var(--color-white);
         border: 1px solid var(--color-white);

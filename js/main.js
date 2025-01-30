@@ -14,8 +14,7 @@ var slider = new Swiper ('.banner__slider__main', {
 
 var thumbs = new Swiper ('.banner__slider__thumbs', {
     slidesPerView: 3,
-    spaceBetween: 24,
-    speed: 2000,
+    spaceBetween: 30,
     loop: true,
     slideToClickedSlide: true,
     autoplay: {
