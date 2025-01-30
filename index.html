@@ -6,6 +6,7 @@
     <title>Document</title>
 
     <link rel="stylesheet" href="./fonts/font.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/6.8.4/swiper-bundle.min.css"/>
     <link rel="stylesheet" href="./css/style.css">
 </head>
 <body>
@@ -32,6 +33,41 @@
         </div>
     </header>
     <main>
+        <section class="banner">
+            <div class="container">
+            
+                <div class="banner__slider__wrapper">                
+                    <div class="swiper-container banner__slider__main">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide"><img src="./images/banner/slide-image-1.png" alt="Casual Networking Event"></div>
+                            <div class="swiper-slide"><img src="./images/banner/slide-image-2.png" alt="Casual Office or Café Gathering"></div>
+                            <div class="swiper-slide"><img src="./images/banner/slide-image-3.png" alt=" Professionals Collaborating"></div>
+                            <div class="swiper-slide"><img src="./images/banner/slide-image-4.png" alt="Fashionable Young Man"></div>
+                        </div>
+                    </div>
+                
+                    <div class="swiper-container banner__slider__thumbs">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide">
+                                <span class="slide__num">(04)</span>
+                                <img src="./images/banner/thum-1.png" alt="thum1">
+                            </div>
+                            <div class="swiper-slide">
+                                <span class="slide__num">(01)</span>
+                                <img src="./images/banner/thum-2.png" alt="thum2">
+                            </div>
+                            <div class="swiper-slide">
+                                <span class="slide__num">(02)</span>
+                                <img src="./images/banner/thum-3.png" alt="thum3"></div>
+                            <div class="swiper-slide">
+                                <span class="slide__num">(03)</span>
+                                <img src="./images/banner/thum-4.png" alt="thum4">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
         <section class="contact">
             <div class="container">
                 <div class="contact__content__wrapper">
@@ -108,5 +144,10 @@
             </div>
         </div>
     </footer>
+
+    <!-- JS Files -->
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/6.8.4/swiper-bundle.min.js"></script>
+    <script type="text/javascript" src="./js/main.js"></script>
 </body>
 </html>

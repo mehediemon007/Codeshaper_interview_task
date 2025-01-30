@@ -1,14 +1,62 @@
 @use '../util/' as u;
 
-.hero {
-  &__wrapper {
-    display: grid;
-    gap: 20px;
+.banner{
 
-    @include u.breakpoint(medium) {
-      grid-template-columns: repeat(2, 1fr);
-      gap: 40px;
-      align-items: center;
+  background-color: var(--color-blue);
+
+  .banner__slider__wrapper {
+
+    width: 100%;
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    gap: 50px;
+  
+    .banner__slider__main {
+      width: 100%;
+      height: auto;
+      overflow: hidden;
+  
+      .swiper-slide {
+        
+        img {
+          max-height: 956px;
+          object-fit: contain;
+        }
+      }
     }
+  
+    .banner__slider__thumbs{
+      max-width: 585px;
+      margin: 50px 100px;
+      overflow: hidden;
+  
+      .swiper-slide{
+        
+        &-active{
+          display: none;
+        }
+
+        .slide__num{
+          display: inline-block;
+          font-size: 20px;
+          font-weight: 400;
+          color: var(--color-white);
+          margin-bottom: 16px;
+        }
+  
+        img {
+          max-width: 181px;
+          height: auto;
+          border-radius: 30px;
+        }
+  
+      }
+  
+      
+    }
+  
   }
+  
 }
+
